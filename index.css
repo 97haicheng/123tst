@@ -1,0 +1,1458 @@
+@charset "UTF-8";
+/*img{ pointer-events: none; }*/
+@font-face {
+  font-family: wenyi;
+  src: url("xiaowei.otf"); }
+body {
+  font-family: 'xiaowei';
+  background: #000;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+a:focus,
+input:focus,
+p:focus,
+div:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-modify: read-write-plaintext-only; }
+
+.loadingBox {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1111111110;
+  background-color: #333;
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lodingBg.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: all 1s; }
+  .loadingBox > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-size: 0.48rem;
+    font-weight: 400;
+    width: 100%;
+    display: block;
+    text-align: center; }
+  .loadingBox > div p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-size: 0.48rem;
+    font-weight: 400;
+    width: 100%;
+    display: block;
+    text-align: center; }
+  .loadingBox > div span {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: #FFF;
+    letter-spacing: 0.1rem; }
+
+#loadText {
+  display: none; }
+
+.logo {
+  width: 6.8rem;
+  position: fixed;
+  top: 0.35rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 99999; }
+
+/*---------zhao------*/
+.pageOne {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/indexbg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none; }
+  .pageOne .one_cont {
+    width: 100%;
+    height: 100%;
+    max-height: 11.5rem;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%); }
+    .pageOne .one_cont .fash {
+      width: 80%;
+      display: block;
+      margin: 0.25rem auto; }
+    .pageOne .one_cont .fashIs {
+      width: 4.2rem;
+      height: 6.1rem;
+      margin: 0.1rem 1.2rem;
+      /*background-image: url(http://h5.angwei.net/chr1201/chr1201/img/fish1.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;*/
+      /*animation: fishMove 2s linear alternate infinite;
+      -moz-animation: fishMove 2s linear alternate infinite;
+      -webkit-animation: fishMove 2s linear alternate infinite;
+      -o-animation: fishMove 2s linear alternate infinite;*/
+      position: relative; }
+      .pageOne .one_cont .fashIs .quan1 {
+        position: absolute;
+        top: 1.50rem;
+        left: 1.24rem;
+        width: 2.50rem;
+        height: 2.56rem;
+        background: url("../img/quan1.png") no-repeat;
+        background-size: 100%;
+        -webkit-animation: quanMove 1.5s linear normal infinite;
+        -o-animation: quanMove 1.5s linear normal infinite;
+        animation: quanMove 1.5s linear normal infinite; }
+      .pageOne .one_cont .fashIs .quan2 {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 5.05rem;
+        height: 5.17rem;
+        background: url("../img/quan2.png") no-repeat;
+        background-size: 100%;
+        -webkit-animation: quanMove 1.5s linear normal infinite;
+        -o-animation: quanMove 1.5s linear normal infinite;
+        animation: quanMove 1.5s linear normal infinite; }
+      .pageOne .one_cont .fashIs .quan3 {
+        position: absolute;
+        top: -1.20rem;
+        left: -1.20rem;
+        width: 7.50rem;
+        height: 7.68rem;
+        background: url("../img/quan3.png") no-repeat;
+        background-size: 100%;
+        -webkit-animation: quanMove 1.5s linear normal infinite;
+        -o-animation: quanMove 1.5s linear normal infinite;
+        animation: quanMove 1.5s linear normal infinite; }
+      .pageOne .one_cont .fashIs .fishLeft {
+        position: absolute;
+        top: -0.40rem;
+        left: -0.20rem;
+        width: 3.44rem;
+        height: 3.50rem;
+        background: url("../img/leftf1.png") no-repeat;
+        background-size: auto 100%;
+        animation: leftfish 1s linear 2s alternate infinite;
+        -webkit-animation: leftfish 1s linear 2s alternate infinite;
+        -o-animation: leftfish 1s linear 2s alternate infinite; }
+      .pageOne .one_cont .fashIs .fishRight {
+        position: absolute;
+        bottom: 0.1rem;
+        right: -0.40rem;
+        width: 3.84rem;
+        height: 4.40rem;
+        background: url("../img/rightf1.png") no-repeat;
+        background-size: auto 100%;
+        -webkit-animation: rightfish 1s linear 2s alternate infinite;
+        -o-animation: rightfish 1s linear 2s alternate infinite;
+        animation: rightfish 1s linear 2s alternate infinite; }
+    .pageOne .one_cont .btnBoxs {
+      width: 100%;
+      position: absolute;
+      bottom: 0px; }
+      .pageOne .one_cont .btnBoxs .chakan {
+        width: 3.5rem;
+        height: 0.9rem;
+        display: block;
+        margin: 0 auto;
+        /*     animation: 3s linear 0s normal none infinite running breath;*/
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/openbtn.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: mymove 1.1s linear alternate infinite;
+        -moz-animation: mymove 1.1s linear alternate infinite;
+        /* Firefox */
+        -webkit-animation: mymove 1.1s linear alternate infinite;
+        /* Safari and Chrome */
+        -o-animation: mymove 1.1s linear alternate infinite; }
+      .pageOne .one_cont .btnBoxs .guize {
+        display: block;
+        width: 1.1rem;
+        margin: 0.2rem auto;
+        display: block;
+        color: #FFF;
+        font-size: 0.24rem;
+        padding-bottom: 0.1rem;
+        border-bottom: 1px solid #FFF; }
+
+.fishHide {
+  display: none; }
+
+@keyframes quanMove {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes quanMove {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes quanMove {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes quanMove {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes leftfish {
+  0% {
+    background: url("../img/leftf1.png") no-repeat;
+    background-size: auto 100%; }
+  20% {
+    background: url("../img/leftf2.png") no-repeat;
+    background-size: auto 100%; }
+  40% {
+    background: url("../img/leftf3.png") no-repeat;
+    background-size: auto 100%; }
+  60% {
+    background: url("../img/leftf4.png") no-repeat;
+    background-size: auto 100%; }
+  80% {
+    background: url("../img/leftf5.png") no-repeat;
+    background-size: auto 100%; }
+  100% {
+    background: url("../img/leftf5.png") no-repeat;
+    background-size: auto 100%; } }
+@-moz-keyframes leftfish {
+  0% {
+    background: url("../img/leftf1.png") no-repeat;
+    background-size: auto 100%; }
+  20% {
+    background: url("../img/leftf2.png") no-repeat;
+    background-size: auto 100%; }
+  40% {
+    background: url("../img/leftf3.png") no-repeat;
+    background-size: auto 100%; }
+  60% {
+    background: url("../img/leftf4.png") no-repeat;
+    background-size: auto 100%; }
+  80% {
+    background: url("../img/leftf5.png") no-repeat;
+    background-size: auto 100%; }
+  100% {
+    background: url("../img/leftf5.png") no-repeat;
+    background-size: auto 100%; } }
+@-webkit-keyframes leftfish {
+  0% {
+    background: url("../img/leftf1.png") no-repeat;
+    background-size: auto 100%; }
+  20% {
+    background: url("../img/leftf2.png") no-repeat;
+    background-size: auto 100%; }
+  40% {
+    background: url("../img/leftf3.png") no-repeat;
+    background-size: auto 100%; }
+  60% {
+    background: url("../img/leftf4.png") no-repeat;
+    background-size: auto 100%; }
+  80% {
+    background: url("../img/leftf5.png") no-repeat;
+    background-size: auto 100%; }
+  100% {
+    background: url("../img/leftf5.png") no-repeat;
+    background-size: auto 100%; } }
+@-o-keyframes leftfish {
+  0% {
+    background: url("../img/leftf1.png") no-repeat;
+    background-size: auto 100%; }
+  20% {
+    background: url("../img/leftf2.png") no-repeat;
+    background-size: auto 100%; }
+  40% {
+    background: url("../img/leftf3.png") no-repeat;
+    background-size: auto 100%; }
+  60% {
+    background: url("../img/leftf4.png") no-repeat;
+    background-size: auto 100%; }
+  80% {
+    background: url("../img/leftf5.png") no-repeat;
+    background-size: auto 100%; }
+  100% {
+    background: url("../img/leftf5.png") no-repeat;
+    background-size: auto 100%; } }
+@keyframes rightfish {
+  0% {
+    background: url("../img/rightf1.png") no-repeat;
+    background-size: auto 100%; }
+  20% {
+    background: url("../img/rightf2.png") no-repeat;
+    background-size: auto 100%; }
+  40% {
+    background: url("../img/rightf3.png") no-repeat;
+    background-size: auto 100%; }
+  60% {
+    background: url("../img/rightf4.png") no-repeat;
+    background-size: auto 100%; }
+  80% {
+    background: url("../img/rightf5.png") no-repeat;
+    background-size: auto 100%; }
+  100% {
+    background: url("../img/rightf6.png") no-repeat;
+    background-size: auto 100%; } }
+@-moz-keyframes rightfish {
+  0% {
+    background: url("../img/rightf1.png") no-repeat;
+    background-size: auto 100%; }
+  20% {
+    background: url("../img/rightf2.png") no-repeat;
+    background-size: auto 100%; }
+  40% {
+    background: url("../img/rightf3.png") no-repeat;
+    background-size: auto 100%; }
+  60% {
+    background: url("../img/rightf4.png") no-repeat;
+    background-size: auto 100%; }
+  80% {
+    background: url("../img/rightf5.png") no-repeat;
+    background-size: auto 100%; }
+  100% {
+    background: url("../img/rightf6.png") no-repeat;
+    background-size: auto 100%; } }
+@-webkit-keyframes rightfish {
+  0% {
+    background: url("../img/rightf1.png") no-repeat;
+    background-size: auto 100%; }
+  20% {
+    background: url("../img/rightf2.png") no-repeat;
+    background-size: auto 100%; }
+  40% {
+    background: url("../img/rightf3.png") no-repeat;
+    background-size: auto 100%; }
+  60% {
+    background: url("../img/rightf4.png") no-repeat;
+    background-size: auto 100%; }
+  80% {
+    background: url("../img/rightf5.png") no-repeat;
+    background-size: auto 100%; }
+  100% {
+    background: url("../img/rightf6.png") no-repeat;
+    background-size: auto 100%; } }
+@-o-keyframes rightfish {
+  0% {
+    background: url("../img/rightf1.png") no-repeat;
+    background-size: auto 100%; }
+  20% {
+    background: url("../img/rightf2.png") no-repeat;
+    background-size: auto 100%; }
+  40% {
+    background: url("../img/rightf3.png") no-repeat;
+    background-size: auto 100%; }
+  60% {
+    background: url("../img/rightf4.png") no-repeat;
+    background-size: auto 100%; }
+  80% {
+    background: url("../img/rightf5.png") no-repeat;
+    background-size: auto 100%; }
+  100% {
+    background: url("../img/rightf6.png") no-repeat;
+    background-size: auto 100%; } }
+/*---------zhao------*/
+@keyframes rowDown {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  35% {
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+    opacity: 0; }
+  65% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+    opacity: 0; } }
+@keyframes breath {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes breath {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1;
+    border: 1px solid #3bebeb; } }
+.pageTwo {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: none; }
+  .pageTwo .two_cont {
+    width: 6rem;
+    height: 7.64rem;
+    padding: 2rem 0.4rem 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(http://h5.angwei.net/chr1201/chr1201/img/guizeBG@2x.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .pageTwo .two_cont > span {
+      position: absolute;
+      display: block;
+      width: 0.9rem;
+      height: 0.9rem;
+      top: 0px;
+      right: 0px; }
+    .pageTwo .two_cont > div {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch; }
+      .pageTwo .two_cont > div img {
+        width: 100%; }
+    .pageTwo .two_cont > div::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 8px;
+      /*高宽分别对应横竖滚动条的尺寸*/
+      height: 1px; }
+    .pageTwo .two_cont > div::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 0px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      background: #ffd290; }
+    .pageTwo .two_cont > div::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      border-radius: 0px;
+      background: #EDEDED; }
+
+.pageFour {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/bg2@2x.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+  display: none; }
+  .pageFour .one_cont {
+    width: 100%;
+    height: 11rem;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%); }
+    .pageFour .one_cont .four_box {
+      width: 5.68rem;
+      height: 8.21rem;
+      padding: 0.5rem 0.7rem;
+      background-image: url(http://h5.angwei.net/chr1201/chr1201/img/tiBg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      margin: 0.6rem auto 0rem; }
+      .pageFour .one_cont .four_box .title {
+        width: 6.2rem;
+        overflow: hidden; }
+        .pageFour .one_cont .four_box .title img {
+          width: 1.1rem;
+          float: left;
+          margin: 0.5rem 0 0.5rem 0.2rem;
+          display: block; }
+      .pageFour .one_cont .four_box .tiBox {
+        width: 100%; }
+        .pageFour .one_cont .four_box .tiBox span {
+          background: #FFF;
+          color: #333;
+          font-size: 0.25rem;
+          display: block;
+          width: 1.1rem;
+          height: 0.35rem;
+          line-height: 0.35rem;
+          border-radius: 0.05rem; }
+        .pageFour .one_cont .four_box .tiBox p {
+          font-size: 0.32rem;
+          color: #FFF;
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin: 0.1rem 0rem; }
+      .pageFour .one_cont .four_box .xuanxiang {
+        width: 90%;
+        margin: 0.3rem auto 0rem; }
+        .pageFour .one_cont .four_box .xuanxiang .items {
+          min-height: 0.6rem;
+          padding: 0.15rem 0rem;
+          cursor: pointer;
+          position: relative; }
+          .pageFour .one_cont .four_box .xuanxiang .items span {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 99999; }
+          .pageFour .one_cont .four_box .xuanxiang .items > div {
+            display: inline-block;
+            width: 0.54rem;
+            height: 0.34rem;
+            border: 1px solid #FFF;
+            position: relative;
+            float: left;
+            vertical-align: middle;
+            cursor: pointer;
+            z-index: 888; }
+            .pageFour .one_cont .four_box .xuanxiang .items > div img {
+              display: block;
+              width: 0.6rem;
+              bottom: 0rem;
+              left: 0rem;
+              position: absolute; }
+          .pageFour .one_cont .four_box .xuanxiang .items p {
+            display: table;
+            font-size: 0.28rem;
+            color: #FFF;
+            padding-left: 0.1rem;
+            text-align: left; }
+    .pageFour .one_cont .submitBox {
+      width: 3.5rem;
+      height: 0.91rem;
+      position: relative;
+      z-index: 22;
+      overflow: hidden;
+      margin: 0rem auto;
+      background-image: url(http://h5.angwei.net/chr1201/chr1201/img/goNext.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
+
+.pageFive {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+  display: none; }
+  .pageFive .five_cont {
+    width: 90%;
+    height: 100%;
+    max-height: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .pageFive .five_cont > div {
+      margin-top: 8.8rem; }
+      .pageFive .five_cont > div span {
+        display: block;
+        width: 3.5rem;
+        height: 0.88rem;
+        margin: 0.1rem auto;
+        cursor: pointer; }
+      .pageFive .five_cont > div .getFu {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/getFu@2x.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .pageFive .five_cont > div .zcyc {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/zcyc@2x.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+
+.pageSix {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/jgbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+  display: none; }
+  .pageSix .six_cont {
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    .pageSix .six_cont > img {
+      width: 100%; }
+    .pageSix .six_cont > div {
+      width: 100%;
+      margin-top: -0.6rem;
+      position: relative; }
+      .pageSix .six_cont > div span {
+        width: 6.58rem;
+        height: 2.43rem;
+        display: block;
+        margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 0.2rem;
+        cursor: pointer; }
+      .pageSix .six_cont > div .jrdk_1 {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/li_1.png); }
+      .pageSix .six_cont > div .jrdk_2 {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/li_2.png); }
+      .pageSix .six_cont > div .jrdk_3 {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/li_3.png); }
+    .pageSix .six_cont .lqddl {
+      width: 3.5rem;
+      height: 0.9rem;
+      background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lddl.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer; }
+.pageSix .six_cont .myJP {
+  display: block;
+  cursor: pointer; 
+  position: absolute;
+  top: 0.3rem;
+  left: 0.4rem;
+  color: #FFF;
+  font-size: 0.35rem;
+}
+  .pageSix .lqtk_Box {
+    position: absolute;
+    z-index: 99999;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+    display: none; }
+    .pageSix .lqtk_Box > div {
+      background-image: url(http://h5.angwei.net/chr1201/chr1201/img/tkjnbg@2x.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 4.97rem;
+      height: 7.15rem;
+      padding: 1.8rem 0.8rem 0.8rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .pageSix .lqtk_Box > div .lqInput {
+        position: relative;
+        height: 100%;
+        display: none; }
+        .pageSix .lqtk_Box > div .lqInput input {
+          width: 4.32rem;
+          height: 0.54rem;
+          border: 1px solid #d3ab56;
+          border-radius: .05rem;
+          padding: 0.03rem 0.1rem 0.03rem 0.55rem;
+          margin-bottom: 0.1rem;
+          background-position: 0.1rem;
+          background-repeat: no-repeat;
+          background-size: auto 60%; }
+        .pageSix .lqtk_Box > div .lqInput input[name=name] {
+          background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-name@2x.png); }
+        .pageSix .lqtk_Box > div .lqInput input[name=iphone] {
+          background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-iphone@2x.png); }
+        .pageSix .lqtk_Box > div .lqInput input[name=code] {
+          background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-code@2x.png); }
+        .pageSix .lqtk_Box > div .lqInput input[name=ygTime1] {
+          background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_time.png); }
+        .pageSix .lqtk_Box > div .lqInput .codeBox {
+          overflow: hidden; }
+          .pageSix .lqtk_Box > div .lqInput .codeBox input {
+            width: 2.8rem;
+            float: left; }
+          .pageSix .lqtk_Box > div .lqInput .codeBox button {
+            width: 1.45rem;
+            float: right;
+            background: #d3ab56;
+            border: none;
+            border-radius: 0.05rem;
+            color: #FFF;
+            height: 0.62rem;
+            font-size: 0.24rem; }
+        .pageSix .lqtk_Box > div .lqInput .submitBox2 {
+          width: 100%;
+          position: absolute;
+          bottom: 0px; }
+          .pageSix .lqtk_Box > div .lqInput .submitBox2 button {
+            width: 100%;
+            height: 0.6rem;
+            background: #d3ab56;
+            border: none;
+            border-radius: 0.05rem;
+            color: #FFF;
+            font-size: 0.3rem; }
+          .pageSix .lqtk_Box > div .lqInput .submitBox2 p {
+            color: #d3ab56;
+            font-size: 0.24rem;
+            text-align: center;
+            margin: 0.1rem 0rem; }
+        .pageSix .lqtk_Box > div .lqInput select {
+          width: 4.95rem;
+          height: 0.63rem;
+          min-height: 0.63rem;
+          max-height: 0.63rem;
+          border: 1px solid #d3ab56;
+          border-radius: .05rem;
+          padding: 0.03rem 0.1rem 0.03rem 0.55rem;
+          margin-bottom: 0.1rem;
+          background-position: 0.1rem;
+          background-repeat: no-repeat;
+          background-size: auto 60%;
+          background-color: #FFF; }
+        .pageSix .lqtk_Box > div .lqInput select[name=province1] {
+          background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_sheng.png); }
+        .pageSix .lqtk_Box > div .lqInput select[name=city1] {
+          background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_address.png); }
+        .pageSix .lqtk_Box > div .lqInput select[name=addressAll1] {
+          background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_store.png); }
+        .pageSix .lqtk_Box > div .lqInput p {
+          font-size: 0.24rem;
+          font-family: 'xiaowei';
+          color: #d3ab56; }
+          .pageSix .lqtk_Box > div .lqInput p span {
+            font-size: 0.14rem;
+            font-family: 'xiaowei'; }
+        .pageSix .lqtk_Box > div .lqInput .lqMelectBox select {
+          width: 2.42rem; }
+      .pageSix .lqtk_Box > div .lqOk {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/gxn_code.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 5.71rem;
+        height: 4.66rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: none; }
+        .pageSix .lqtk_Box > div .lqOk p {
+          display: inline-block;
+          padding: 0.1rem 0.2rem;
+          background: #d3ab56;
+          color: #FFF;
+          border-radius: 0.05rem;
+          margin: 2.7rem auto 0rem;
+          font-size: 0.33rem; }
+          .pageSix .lqtk_Box > div .lqOk p span {
+            margin: 0 0.05rem;
+            display: inline; }
+      .pageSix .lqtk_Box > div .lqYjlq {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/yjlq_jrbt@2x.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 5.71rem;
+        height: 4.66rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: none; }
+        .pageSix .lqtk_Box > div .lqYjlq a {
+          width: 100%;
+          height: 0.6rem;
+          line-height: 0.6rem;
+          background: #d3ab56;
+          border-radius: 0.05rem;
+          color: #FFF;
+          font-size: 0.3rem;
+          display: block;
+          margin-top: 6rem; }
+      .pageSix .lqtk_Box > div .lqYjs {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/hdjs-show@2x.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 5.71rem;
+        height: 4.66rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: none; }
+      .pageSix .lqtk_Box > div .lqYjs a {
+          width: 100%;
+          height: 0.6rem;
+          line-height: 0.6rem;
+          background: #d3ab56;
+          border-radius: 0.05rem;
+          color: #FFF;
+          font-size: 0.3rem;
+          display: block;
+          margin-top: 6rem; }
+.pageSix .lqtk_Box > div .chaxun,.chaxun2{
+  display: none;
+}
+.pageSix .lqtk_Box > div .chaxun h5{
+          width: 4.9rem;
+          height: 0.54rem;
+          border-radius: 0.1rem;
+          background: #d5ae59;
+          text-align: center;
+          line-height: 0.54rem;
+          color: #FFF;
+          font-size: 0.34rem;
+          font-family: '黑体';
+          margin-top: -1rem;
+      }
+.pageSix .lqtk_Box > div .chaxun >div p{
+        font-size: 0.34rem;
+        color: #d5ae59;
+        text-align: center;
+        margin: 0.2rem 0;
+      }
+.pageSix .lqtk_Box > div .chaxun  .chaInput input {
+  width: 4.32rem;
+  height: 0.54rem;
+  border: 1px solid #d3ab56;
+  border-radius: .05rem;
+  padding: 0.03rem 0.1rem 0.03rem 0.55rem;
+  margin-bottom: 0.1rem;
+  background-position: 0.1rem;
+  background-repeat: no-repeat;
+  background-size: auto 60%; }
+.pageSix .lqtk_Box > div .chaxun .chaInput input[name=nameNew] {
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-name@2x.png); }
+.pageSix .lqtk_Box > div .chaxun .chaInput  input[name=iphoneNew] {
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-iphone@2x.png); }
+.pageSix .lqtk_Box > div .chaxun .chaInput input[name=codeNew] {
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-code@2x.png); }
+
+.pageSix .lqtk_Box > div .chaxun .codeBox {
+  overflow: hidden; }
+.pageSix .lqtk_Box > div .chaxun .codeBox2 input {
+  width: 2.8rem;
+  float: left; }
+  .pageSix .lqtk_Box > div .chaxun .codeBox2 button {
+  width: 1.45rem;
+  float: right;
+  background: #d3ab56;
+  border: none;
+  border-radius: 0.05rem;
+  color: #FFF;
+  height: 0.62rem;
+  font-size: 0.24rem; }
+  .pageSix .lqtk_Box > div .chaxun .submitBox3 button{
+    width: 100%;
+    height: 0.6rem;
+    background: #d3ab56;
+    border: none;
+    border-radius: 0.05rem;
+    color: #FFF;
+    font-size: 0.3rem;
+    margin-top: 3.5rem;
+  }
+.pageSix .lqtk_Box > div .chaxun2{
+  font-family: '黑体';
+}
+.pageSix .lqtk_Box > div .chaxun2 h5{
+  width: 4.9rem;
+  height: 0.54rem;
+  border-radius: 0.1rem;
+  background: #d5ae59;
+  text-align: center;
+  line-height: 0.54rem;
+  color: #FFF;
+  font-size: 0.34rem;
+  margin-top: -1rem;
+}
+.pageSix .lqtk_Box > div .chaxun2 >div >p{
+  font-size: 0.74rem;
+  color: #d5ae59;
+  text-align: center;
+  margin: 0.2rem 0;
+}
+.pageSix .lqtk_Box > div .chaxun2 .cx_ht >p{
+  font-size: 0.36rem;
+  color: #d5ae59;
+  text-align: center;
+}
+.pageSix .lqtk_Box > div .chaxun2 .cx_ht >p span{
+  font-weight: 600;
+}
+.pageSix .lqtk_Box > div .chaxun2  .cx_list{
+  text-align: center;
+  color: #333;
+}
+.pageSix .lqtk_Box > div .chaxun2  .cx_list >div{
+    margin: 0.1rem 0rem; 
+}
+.pageSix .lqtk_Box > div .chaxun2  .cx_list >div >p{
+  font-weight: 600;
+  font-size: 0.32rem;
+}
+.pageSix .lqtk_Box > div .chaxun2  .cx_list >div >span{
+  color: #f64c4c;
+  font-weight: 600;
+  font-size: 0.48rem;
+  line-height: 0.5rem;
+}
+.pageSix .lqtk_Box > div .chaxun2 .cx_title .cx_tishi{
+  font-size: 0.18rem;
+  color: #d5ae59;
+  padding: 0.2rem 0rem;
+  display: block;
+  text-align: center;
+}
+.pageSix .lqtk_Box > div .chaxun2 .cx_goBack button{
+  margin: 0.4rem 0rem;
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background: #d5ae59;
+  color: #FFF;
+  border: none;
+  border-radius: 0.1rem;
+}
+
+  .pageSix .lqtk_Box > div .closeThisLq {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 0.9rem;
+        height: 0.9rem;
+        cursor: pointer; }
+
+.pageSeven {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/jgbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+  display: none; }
+  .pageSeven .seven_cont {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+    .pageSeven .seven_cont .inputBox {
+      background-image: url(http://h5.angwei.net/chr1201/chr1201/img/liuziBG2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 5rem;
+      height: 8.72rem;
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem 0.8rem 0.3rem;
+      font-family: "xiaowei"; }
+      .pageSeven .seven_cont .inputBox > h5 {
+        font-size: 0.32rem;
+        color: #bf9b4e;
+        text-align: center;
+        font-family: "xiaowei"; }
+      .pageSeven .seven_cont .inputBox > p {
+        color: #bf9b4e;
+        font-size: 0.18rem;
+        margin: 0.1rem 0rem;
+        text-align: center; }
+      .pageSeven .seven_cont .inputBox > div input {
+        width: 4.32rem;
+        height: 0.54rem;
+        border: 1px solid #d3ab56;
+        border-radius: .05rem;
+        padding: 0.03rem 0.1rem 0.03rem 0.55rem;
+        margin-bottom: 0.1rem;
+        background-position: 0.1rem;
+        background-repeat: no-repeat;
+        background-size: auto 60%; }
+      .pageSeven .seven_cont .inputBox > div input[name=name2] {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-name@2x.png); }
+      .pageSeven .seven_cont .inputBox > div input[name=idCard] {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_card.png); }
+      .pageSeven .seven_cont .inputBox > div input[name=phone2] {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-iphone@2x.png); }
+      .pageSeven .seven_cont .inputBox > div input[name=yanZM] {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lq-code@2x.png); }
+      .pageSeven .seven_cont .inputBox > div input[name=ygTime] {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_time.png); }
+      .pageSeven .seven_cont .inputBox > div button {
+        width: 100%;
+        height: 0.6rem;
+        background: #d3ab56;
+        border: none;
+        border-radius: 0.05rem;
+        color: #FFF;
+        font-size: 0.3rem; }
+      .pageSeven .seven_cont .inputBox > div select {
+        width: 4.95rem;
+        height: 0.63rem;
+        min-height: 0.63rem;
+        max-height: 0.63rem;
+        border: 1px solid #d3ab56;
+        border-radius: .05rem;
+        padding: 0.03rem 0.1rem 0.03rem 0.55rem;
+        margin-bottom: 0.1rem;
+        background-position: 0.1rem;
+        background-repeat: no-repeat;
+        background-size: auto 60%;
+        background-color: #FFF; }
+      .pageSeven .seven_cont .inputBox > div select[name=province] {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_sheng.png); }
+      .pageSeven .seven_cont .inputBox > div select[name=city] {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_address.png); }
+      .pageSeven .seven_cont .inputBox > div select[name=addressAll] {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/icon_store.png); }
+      .pageSeven .seven_cont .inputBox .xieyi {
+        padding: 0.1rem 0rem;
+        font-size: 0.16rem; }
+        .pageSeven .seven_cont .inputBox .xieyi input[name=xieyi] {
+          width: 0.34rem;
+          height: 0.34rem;
+          vertical-align: middle;
+          margin-bottom: 0rem; }
+        .pageSeven .seven_cont .inputBox .xieyi b {
+          color: #f64c4c;
+          margin: 0 0.05rem;
+          cursor: pointer;
+          font-weight: 400; }
+      .pageSeven .seven_cont .inputBox .btnbox {
+        overflow: hidden; }
+        .pageSeven .seven_cont .inputBox .btnbox input {
+          width: 2.8rem;
+          float: left; }
+        .pageSeven .seven_cont .inputBox .btnbox button {
+          width: 1.45rem;
+          float: right;
+          background: #d3ab56;
+          border: none;
+          border-radius: 0.05rem;
+          color: #FFF;
+          height: 0.62rem;
+          font-size: 0.24rem; }
+      .pageSeven .seven_cont .inputBox .selectBox select {
+        width: 2.42rem; }
+      .pageSeven .seven_cont .inputBox .closeInputBox {
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+        width: 0.64rem;
+        height: 0.64rem;
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/closebJbfz@2x.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer; }
+    .pageSeven .seven_cont .jbfz {
+      background-image: url(http://h5.angwei.net/chr1201/chr1201/img/liuziBG2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 6rem;
+      height: 8.52rem;
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1.2rem 0.3rem 0.3rem;
+      display: none; }
+      .pageSeven .seven_cont .jbfz .closeJbfz {
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+        width: 0.64rem;
+        height: 0.64rem;
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/closebJbfz@2x.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer; }
+      .pageSeven .seven_cont .jbfz > div {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch; }
+        .pageSeven .seven_cont .jbfz > div img {
+          width: 100%; }
+      .pageSeven .seven_cont .jbfz > div::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width: 8px;
+        /*高宽分别对应横竖滚动条的尺寸*/
+        height: 1px; }
+      .pageSeven .seven_cont .jbfz > div::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius: 0px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        background: #ffd290; }
+      .pageSeven .seven_cont .jbfz > div::-webkit-scrollbar-track {
+        /*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        background: #EDEDED; }
+
+.isOkShare {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lodingBg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+  display: none; }
+  .isOkShare .ok_cont {
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .isOkShare .ok_cont > img {
+      width: 100%; }
+    .isOkShare .ok_cont .hxm {
+      width: 5.41rem;
+      height: 3.27rem;
+      background-image: url(http://h5.angwei.net/chr1201/chr1201/img/ticg@2x.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: -0.4rem auto 0rem;
+      text-align: center; overflow: hidden; color: #FFF;
+      font-size: 0.42rem;font-family: '黑体';}
+      .isOkShare .ok_cont .hxm p {
+        display: inline-block;
+        margin-top: 0.2rem;
+        color: #FFF;
+        font-size: 0.42rem; }
+.isOkShare .ok_cont .hxm b {
+  display: block;
+  color: #FFF;
+  margin-top: 1.3rem;
+  font-size: 0.42rem; }
+    .isOkShare .ok_cont .btnBox {
+      margin-top: 0.4rem; }
+      .isOkShare .ok_cont .btnBox span {
+        display: block;
+        width: 3.5rem;
+        height: 0.82rem;
+        margin: 0.15rem auto;
+        cursor: pointer;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .isOkShare .ok_cont .btnBox .goShop {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/goShop@2x.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 3.5rem;
+        height: 0.82rem;
+        margin: 0.15rem auto;
+        display: block; }
+      .isOkShare .ok_cont .btnBox .shareBtn {
+        background-image: url(http://h5.angwei.net/chr1201/chr1201/img/shareThis@2x.png); }
+  .isOkShare .shareImg {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 100vw;
+    height: 100vh;
+    display: none; }
+
+.shenhe {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://h5.angwei.net/chr1201/chr1201/img/lodingBg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+  display: none; }
+  .shenhe .shen_cont {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden; }
+    .shenhe .shen_cont img {
+      width: 6.2rem;
+      margin: 4rem auto 0rem;
+      display: none; }
+
+.audio {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  z-index: 999999999;
+  cursor: pointer; }
+  .audio img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; }
+  .audio .active {
+    animation: 1.2s linear 0s normal none infinite running revolveRunning; }
+
+@keyframes exMicroUp {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); }
+  to {
+    opacity: .5;
+    transform: translate3d(0, -15px, 0); } }
+@keyframes flash {
+  100%,50%,from {
+    opacity: 1; }
+  25%,75% {
+    opacity: 0; } }
+@-webkit-keyframes revolveRunning {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes pulse {
+  0% {
+    transform: scaleX(1); }
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  to {
+    transform: scaleX(1); } }
+@keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  to {
+    opacity: 0;
+    transform: scale3d(0); } }
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1; }
+  to {
+    opacity: 0.5;
+    transform: translate3d(0, 8%, 0); } }
+@keyframes fishMove {
+  0% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish1.png");
+    opacity: 0; }
+  25% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish1.png");
+    background-size: 100%;
+    opacity: 1; }
+  50% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish2.png");
+    background-size: 100%;
+    opacity: 1; }
+  75% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%; }
+  80% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  85% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  95% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  100% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; } }
+@-moz-keyframes fishMove {
+  0% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish1.png");
+    background-size: 100%;
+    opacity: 0; }
+  25% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish1.png");
+    background-size: 100%;
+    opacity: 1; }
+  50% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish2.png");
+    background-size: 100%;
+    opacity: 1; }
+  75% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%; }
+  80% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  85% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  95% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  100% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; } }
+@-webkit-keyframes fishMove {
+  0% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish1.png");
+    background-size: 100%;
+    opacity: 0; }
+  25% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish1.png");
+    background-size: 100%;
+    opacity: 1; }
+  50% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish2.png");
+    background-size: 100%;
+    opacity: 1; }
+  75% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%; }
+  80% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  85% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  95% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  100% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; } }
+@-o-keyframes fishMove {
+  0% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish1.png");
+    background-size: 100%;
+    opacity: 0; }
+  25% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish1.png");
+    background-size: 100%;
+    opacity: 1; }
+  50% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish2.png");
+    background-size: 100%;
+    opacity: 1; }
+  75% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%; }
+  80% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  85% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  95% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; }
+  100% {
+    background-image: url("http://h5.angwei.net/chr1201/chr1201/img/fish4.png");
+    background-size: 100%;
+    opacity: 1; } }
+@keyframes mymove {
+  0% {
+    -webkit-transform: scale(0.8, 0.8); }
+  100% {
+    -webkit-transform: scale(0.9, 0.9); } }
+@-moz-keyframes mymove {
+  0% {
+    -webkit-transform: scale(1.2, 1.2); }
+  100% {
+    -webkit-transform: scale(0.9, 0.9); } }
+@-webkit-keyframes mymove {
+  0% {
+    -webkit-transform: scale(1.2, 1.2); }
+  100% {
+    -webkit-transform: scale(0.9, 0.9); } }
+@-o-keyframes mymove {
+  0% {
+    -webkit-transform: scale(1.2, 1.2); }
+  100% {
+    -webkit-transform: scale(0.9, 0.8); } }
+
+/*# sourceMappingURL=index.css.map */

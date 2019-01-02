@@ -1,0 +1,39 @@
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+//测试结果页
+var jieguo= [
+    {
+        title:"所以，你需要一台能配得上你的智慧座驾——瑞虎8",
+        cont:"找到「完全未来星人」的专属座驾！"
+    },
+    {
+        title:"所以，你需要一台智慧座驾——瑞虎8  带你进阶未来科技体验。",
+        cont:"体验科技，完美驾驭未来生活！"
+    },
+    {
+        title:"所以，你需要一台智慧座驾——瑞虎8  带你探索未来科技体验。",
+        cont:"智慧出行，科技魅力，等你感受！"
+    }
+    
+]
+function jieguo(a){
+    $(".pageShow .title").attr("src","img/jieguo/chuji_"+a+"_01@2x.png");
+    $(".pageShow .car_imgs").attr("src","img/jieguo/chuji_"+a+"_02@2x.png");
+    $(".pageShow .showText h5").html(jieguo[a-1]);
+    $(".pageShow .showText p").html(jieguo[a-1]);
+}

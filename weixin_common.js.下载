@@ -1,0 +1,173 @@
+/**
+ * Created by Administrator on 2017/4/6.
+ */
+var WxDomain = "https://wx.angwei.net";
+var appID = "wxb3b8ab8c18d82896";
+var url = window.location.href;
+console.log(url);
+var appId = appID;
+var timestamp;
+var signature;
+var nonceStr;
+var openUserId = '';
+var usl = WxDomain+'/'+appID+'/getJsapiTicketJsonp.json?url=' + encodeURIComponent(url) + '&callback=wxinit';
+$.ajax({
+    type: 'GET',
+    url: usl,
+    dataType:"jsonp",
+    jsonp: "cc",
+    timeout: 10000,
+    async:false,
+    success: function(data){
+        
+    },
+    error: function(xhr, type){
+    }
+});
+
+function wxinit(data){
+	console.log(data);
+        var d = data.data;
+        //appId= d.appid;
+        timestamp = d.timestamp;
+        nonceStr = d.nonceStr;
+        signature = d.signature;
+
+
+
+
+wx.config({
+    debug: false,
+    appId: appId,
+    timestamp:timestamp,
+    nonceStr: nonceStr,
+    signature: signature,
+    jsApiList: [
+        'checkJsApi',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'onMenuShareQZone'
+    ]
+});
+
+wx.error(function (res) {
+	console.log("error:"+res.errMsg);
+    //alert(res.errMsg);
+});
+
+wx.ready(function(){
+    wx.checkJsApi({
+        jsApiList: [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'onMenuShareQZone'
+        ],
+        success: function (res) {
+            console.log("cg:"+JSON.stringify(res));
+        }
+    });
+    // 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+    wx.onMenuShareTimeline({
+        title: localTitle,
+        link: localUrl,
+        imgUrl: localPhoto,
+        trigger: function (res) {
+            // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+            //alert('用户点击分享到朋友圈');
+        },
+        success: function (res) {
+            console.log("分享成功！");
+            
+        },
+        cancel: function (res) {
+            //alert('已取消');
+        },
+        fail: function (res) {
+            //alert(JSON.stringify(res));
+        }
+    });
+    // 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+    wx.onMenuShareAppMessage({
+        title: localTitle,
+        link: localUrl,
+        desc:localDesc,
+        imgUrl: localPhoto,
+        trigger: function (res) {
+            // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+        },
+        success: function (res) {
+            console.log("分享成功！");
+        },
+        cancel: function (res) {
+        },
+        fail: function (res) {
+        }
+    });
+    wx.onMenuShareQQ({
+        title: localTitle,
+        link: localUrl,
+        desc:localDesc,
+        imgUrl: localPhoto,
+        trigger: function (res) {
+            // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+        },
+        success: function (res) {
+            console.log("分享成功！");
+        },
+        cancel: function (res) {
+        },
+        fail: function (res) {
+        }
+    });
+    wx.onMenuShareWeibo({
+        title: localTitle,
+        link: localUrl,
+        desc:localDesc,
+        imgUrl: localPhoto,
+        trigger: function (res) {
+            // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+        },
+        success: function (res) {
+            console.log("分享成功！");
+        },
+        cancel: function (res) {
+        },
+        fail: function (res) {
+        }
+    });
+
+    wx.onMenuShareQZone({
+        title: localTitle,
+        link: localUrl,
+        desc:localDesc,
+        imgUrl: localPhoto,
+        trigger: function (res) {
+            // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+        },
+        success: function (res) {
+            console.log("分享成功！");
+        },
+        cancel: function (res) {
+        },
+        fail: function (res) {
+        }
+    });
+});
+
+}
+
+
+
+function is_weixn(){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)=="micromessenger") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
